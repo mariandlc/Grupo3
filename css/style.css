@@ -1,0 +1,23 @@
+body {
+  background-color: #f1f1f1;
+}
+
+@media only screen and (max-width : 400px) {
+  #ul-right{
+    display:none;
+  }
+}
+.places-run-bsas{
+  margin-top: 100px;
+}
+.places-run-bsas h2,h3{
+  text-align: center;
+}
+
+.palermo p,img,h3{
+  margin-bottom: 20px;
+}
+
+.palermo img{
+  width: 100%;
+}
