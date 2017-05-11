@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Registración</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -15,134 +17,141 @@
   </head>
   <body>
 
-  		<nav class="navbar navbar-default">
-		  <div class="container-fluid">
-		    <!-- Brand and toggle get grouped for better mobile display -->
-		    <div class="navbar-header">
-		      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-		        <span class="sr-only">Toggle navigation</span>
-		        <span class="icon-bar"></span>
-		        <span class="icon-bar"></span>
-		        <span class="icon-bar"></span>
-		      </button>
-		      <a class="navbar-brand" href="#">Home</a>
-		    </div>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
 
-		    <!-- Collect the nav links, forms, and other content for toggling -->
-		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-		      <ul class="nav navbar-nav">
-		        <li class="active"><a href="#">Login<span class="sr-only">(current)</span></a></li>
-		    	<!--    <li><a href="#">Link</a></li> -->
+        <!-- Logo -->
+        <div class="navbar-header">
 
-		      </ul>
-		      <ul class="nav navbar-nav navbar-right">
-		        <li><a href="#">Preguntas frecuentes</a></li>
-		      </ul>
-		    </div><!-- /.navbar-collapse -->
-		  </div><!-- /.container-fluid -->
-		</nav>
+          <button type="button" class="navbar-toggle " data-toggle="collapse" data-target="#mainNavBar">
+            <spam class="icon-bar"></spam>
+            <spam class="icon-bar"></spam>
+            <spam class="icon-bar"></spam>
+          </button>
+
+          <a href="index.html" class="navbar-brand">
+            <!-- <img src="images/logo.jpg" width="55" height="50" alt="">-->
+            Run Argentina
+          </a>
+        </div>
+
+        <!-- Menu -->
+        <div class="collapse navbar-collapse " id="mainNavBar">
+          <ul class="nav navbar-nav">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="#">Faq</a></li>
+          </ul>
+
+        <!--right align-->
+          <ul class="nav navbar-nav navbar-right ul-right">
+            <li><a href="login.html">Ingresar</a></li>
+            <li><a href="registro.html">Regístrate</a></li>
+          </ul>
+        </div>
+
+    </nav>
 
 
 
 
-  		<div class="col-xs-0 col-sm-4 col-md-4">
+		<div class="col-xs-0 col-sm-4 col-md-4">
 
-  		</div>
+		</div>
 
-		  <div class="col-xs-12 col-sm-4 col-md-4">
+	  <div class="col-xs-12 col-sm-4 col-md-4">
 
-				<form>
-				  <div class="form-group">
-				    <label for="exampleInputEmail1">Nombre</label>
-				    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="" required>
-				  </div>
+			<form>
+			  <div class="form-group">
+			    <label for="exampleInputEmail1">Nombre</label>
+			    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="" required>
+			  </div>
 
-          <div class="form-group">
-            <label for="exampleInputEmail1">Apellido</label>
-            <input type="text" class="form-control" id="exampleInputEmail1" placeholder="" required>
-          </div>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Apellido</label>
+          <input type="text" class="form-control" id="exampleInputEmail1" placeholder="" required>
+        </div>
 
-          <div class="form-group">
-            <label for="exampleInputEmail1">Fecha de nacimiento</label>
-            <input type="date" class="form-control" id="exampleInputEmail1" placeholder="" required>
-          </div>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Fecha de nacimiento</label>
+          <input type="date" class="form-control" id="exampleInputEmail1" placeholder="" required>
+        </div>
 
+        <div class="radio">
+          <label class="radio-inline">
+            <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="hombre" required> Hombre
+          </label>
+          <label class="radio-inline">
+            <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="mujer" required> Mujer
+          </label>
+        </div>
+
+
+          <label for="exampleInputEmail1">¿En que momento del día podes correr?</label>
           <div class="radio">
-            <label class="radio-inline">
-              <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="hombre" required> Hombre
-            </label>
-            <label class="radio-inline">
-              <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="mujer" required> Mujer
-            </label>
-          </div>
-
-
-            <label for="exampleInputEmail1">¿En que momento del día podes correr?</label>
-            <div class="radio">
-          <label>
-            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-            A la mañana
-          </label>
-        </div>
-        <div class="radio">
-          <label>
-            <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-            A la tarde
-          </label>
-        </div>
-        <div class="radio">
-          <label>
-            <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
-            A la noche
-          </label>
-        </div>
-
-        <label for="exampleInputEmail1">¿Te gustaria correr con personas en tu rango de edad?</label>
-        <div class="radio">
         <label>
           <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-          Si
+          A la mañana
         </label>
       </div>
       <div class="radio">
         <label>
           <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-          No
+          A la tarde
         </label>
       </div>
       <div class="radio">
         <label>
           <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
-          ¡Me es indistinto!
+          A la noche
         </label>
       </div>
 
-
-          <div class="form-group">
-            <label for="exampleInputPassword1">E-mail</label>
-            <input type="email" class="form-control" id="exampleInputPassword1" placeholder="" required>
-          </div>
-
-          <div class="form-group">
-            <label for="exampleInputPassword1">Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="" required>
-          </div>
-
-
-          <div class="form-group">
-            <label for="exampleInputPassword1">Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Repeti tu contraseña" required>
-          </div>
-
-          <button type="button" class="btn btn-primary btn-lg btn-block">Registrarme</button>
-				</form>
-
-		  </div>
+      <label for="exampleInputEmail1">¿Te gustaria correr con personas en tu rango de edad?</label>
+      <div class="radio">
+      <label>
+        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+        Si
+      </label>
+    </div>
+    <div class="radio">
+      <label>
+        <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+        No
+      </label>
+    </div>
+    <div class="radio">
+      <label>
+        <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
+        ¡Me es indistinto!
+      </label>
+    </div>
 
 
-  		<div class="col-xs-0 col-sm-4 col-md-4">
+        <div class="form-group">
+          <label for="exampleInputPassword1">E-mail</label>
+          <input type="email" class="form-control" id="exampleInputPassword1" placeholder="" required>
+        </div>
 
-  		</div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="" required>
+        </div>
+
+
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Repeti tu contraseña" required>
+        </div>
+
+        <button type="button" class="btn btn-primary btn-lg btn-block">Registrarme</button>
+			</form>
+
+	  </div>
+
+
+		<div class="col-xs-0 col-sm-4 col-md-4">
+
+		</div>
 
 
 
