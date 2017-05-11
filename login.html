@@ -18,83 +18,74 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
- <body>
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
 
-   <nav class="navbar navbar-inverse navbar-fixed-top">
-     <div class="container-fluid">
+        <!-- Logo -->
+        <div class="navbar-header">
 
-       <!-- Logo -->
-       <div class="navbar-header">
+          <button type="button" class="navbar-toggle " data-toggle="collapse" data-target="#mainNavBar">
+            <spam class="icon-bar"></spam>
+            <spam class="icon-bar"></spam>
+            <spam class="icon-bar"></spam>
+          </button>
 
-         <button type="button" class="navbar-toggle " data-toggle="collapse" data-target="#mainNavBar">
-           <spam class="icon-bar"></spam>
-           <spam class="icon-bar"></spam>
-           <spam class="icon-bar"></spam>
-         </button>
+          <a href="index.html" class="navbar-brand">
+            <!-- <img src="images/logo.jpg" width="55" height="50" alt="">-->
+            Run Argentina
+          </a>
+        </div>
 
-         <a href="index.html" class="navbar-brand">
-           <!-- <img src="images/logo.jpg" width="55" height="50" alt="">-->
-           Run Argentina
-         </a>
-       </div>
+        <!-- Menu -->
+        <div class="collapse navbar-collapse " id="mainNavBar">
+          <ul class="nav navbar-nav">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="#">Preguntas frecuentes</a></li>
+          </ul>
 
-       <!-- Menu -->
-       <div class="collapse navbar-collapse " id="mainNavBar">
-         <ul class="nav navbar-nav">
-           <li><a href="index.html">Inicio</a></li>
-           <li><a href="#">Faq</a></li>
-         </ul>
+        <!--right align-->
+          <ul id="ul-right" class="nav navbar-nav navbar-right">
+            <li class="active"><a href="login.html">Inicia sesión</a></li>
+            <li><a href="registro.html">Regístrate</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
-       <!--right align-->
-         <ul class="nav navbar-nav navbar-right ul-right">
-           <li><a href="login.html">Ingresar</a></li>
-           <li><a href="registro.html">Regístrate</a></li>
-         </ul>
-       </div>
+    <div class="col-xs-0 col-sm-4 col-md-4">
 
-   </nav>
+    </div>
 
+    <div class="col-xs-12 col-sm-4 col-md-4">
 
+      <form>
+        <div class="form-group">
+          <label for="exampleInputEmail1">E-mail</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" placeholder="">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Contraseña</label>
+          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="">
+        </div>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox"> Recordar mis datos
+          </label>
+        </div>
+        <button type="button" class="btn btn-primary btn-lg btn-block">Inicia sesión</button>
+      </form>
 
-
- 		<div class="col-xs-0 col-sm-4 col-md-4">
-
- 		</div>
-
-		  <div class="col-xs-12 col-sm-4 col-md-4">
-
-				<form>
-				  <div class="form-group">
-				    <label for="exampleInputEmail1">Email address</label>
-				    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Username">
-				  </div>
-				  <div class="form-group">
-				    <label for="exampleInputPassword1">Password</label>
-				    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-				  </div>
-				  <div class="checkbox">
-				    <label>
-				      <input type="checkbox"> Remember me
-				    </label>
-				  </div>
-				  <button type="submit" class="btn btn-default">Submit</button>
-				</form>
-
-		  </div>
+    </div>
 
 
- 		<div class="col-xs-0 col-sm-4 col-md-4">
+    <div class="col-xs-0 col-sm-4 col-md-4">
 
- 		</div>
+    </div>
 
-
-
-
-
-
-   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-   <!-- Include all compiled plugins (below), or include individual files as needed -->
-   <script src="js/bootstrap.min.js"></script>
- </body>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
 </html>
