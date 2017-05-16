@@ -3,7 +3,7 @@ body {
     padding-top: 100px;
 }
 
-#carousel-example-generic {
+.carousel {
   position: relative;
 }
 
@@ -11,7 +11,7 @@ body {
   display: block;
   position: absolute;
   z-index: 2;
-  top: 35%;
+  top: 38%;
   left: 2%;
   background-color: rgba(71, 77, 230, 0.65);
 }
@@ -61,6 +61,17 @@ body {
   width: 100%;
 }
 
+@media all and (min-width: 766px) and (orientation:landscape) {
+  .titulo {
+    top: 30%;
+  }
+}
+
+@media all and (min-width: 766px) and (orientation:portrait) {
+  .titulo {
+    top: 20%;
+  }
+}
 
 @media only screen and (max-width: 765px) {
   .carousel-inner > .item > img, .carousel-inner > .item > a > img {
@@ -71,10 +82,6 @@ body {
     left: -257.5px;
     bottom: 0;
     right: 0;
-  }
-
-  .titulo {
-    right: 2%;
   }
 }
 
@@ -87,9 +94,6 @@ body {
     left: -410px;
     bottom: 0;
     right: 0;
-  }
-  .titulo {
-    right: 2%;
   }
 }
 
