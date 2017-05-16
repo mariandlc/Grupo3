@@ -11,7 +11,7 @@ body {
   display: block;
   position: absolute;
   z-index: 2;
-  top: 55%;
+  top: 35%;
   left: 2%;
   background-color: rgba(71, 77, 230, 0.65);
 }
