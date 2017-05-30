@@ -1,3 +1,32 @@
+<?php
+
+require_once('funciones/usuarios.php');
+
+$nombre = isset($_POST['nombre']) ? $_POST['nombre'] : null;
+$apellido = isset($_POST['apellido']) ? $_POST['apellido'] : null;
+$email = isset($_POST['email']) ? $_POST['email'] : null;
+$genero = isset($_POST['genero']) ? $_POST['genero'] : null;
+$horario = isset($_POST['horario']) ? $_POST['horario'] : null;
+$rango = isset($_POST['rango']) ? $_POST['rango'] : null;
+
+
+
+$errores = [];
+if($_POST)
+{
+	//if(!$errores)
+	//if(count($errores) == 0)
+	if(!($errores = registrar($_POST)))
+	{
+		header('location: index.html');
+		exit;
+	}
+}
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -56,15 +85,29 @@
 
   	  <div class="col-xs-12 col-sm-4 col-md-4">
 
+
+        <div class="row">
+        			<?php
+        			//if(count($errores) > 0) {
+        			//if(!empty($errores)) {
+        			if($errores) { ?>
+        				<div class="alert alert-danger">
+        				<?php foreach($errores as $error) {
+        					echo $error . '<br>';
+        				}?>
+        				</div>
+        			<?php } ?>
+
+
   			<form role="form" action="" method="post" enctype="multipart/form-data">
   			  <div class="form-group">
   			    <label for="exampleInputEmail1">Nombre</label>
-  			    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="" required>
+  			    <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ingrese nombre" value=" <?php echo $nombre; ?>">
   			  </div>
 
           <div class="form-group">
             <label for="exampleInputEmail1">Apellido</label>
-            <input type="text" class="form-control" id="exampleInputEmail1" placeholder="" required>
+            <input type="text" class="form-control" id="apellido" name="apellido" value=" <?php echo $apellido; ?>" placeholder="Ingrese su apellido" >
           </div>
 
           <div class="form-group">
@@ -74,10 +117,10 @@
 
           <div class="radio">
             <label class="radio-inline">
-              <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="hombre" required> Hombre
+              <input type="radio" name="genero" id="genero_masculino" value="0"  <?php echo($genero === "0") ? 'checked="checked"' : ''; ?>> Hombre
             </label>
             <label class="radio-inline">
-              <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="mujer" required> Mujer
+              <input type="radio" name="genero" id="genero_femenino" value="1"  <?php echo($genero == "1") ? 'checked="checked"' : ''; ?>> Mujer
             </label>
           </div>
 
@@ -85,19 +128,19 @@
             <label for="exampleInputEmail1">¿En qué momento del día podes correr?</label>
             <div class="radio">
           <label>
-            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+            <input type="radio" name="horario" id="mañana" value="0" <?php echo($horario === "0") ? 'checked="checked"' : ''; ?>>
             A la mañana
           </label>
         </div>
         <div class="radio">
           <label>
-            <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+            <input type="radio" name="horario" id="tarde" value="1" <?php echo($horario == "1") ? 'checked="checked"' : ''; ?>>
             A la tarde
           </label>
         </div>
         <div class="radio">
           <label>
-            <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
+            <input type="radio" name="horario" id="noche" value="2" <?php echo($horario == "2") ? 'checked="checked"' : ''; ?>>
             A la noche
           </label>
         </div>
@@ -105,19 +148,19 @@
         <label for="exampleInputEmail1">¿Te gustaria correr con personas en tu rango de edad?</label>
         <div class="radio">
         <label>
-          <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+          <input type="radio" name="rango" id="si" value="0" <?php echo($rango === "0") ? 'checked="checked"' : ''; ?>>
           Si
         </label>
       </div>
       <div class="radio">
         <label>
-          <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+          <input type="radio" name="rango" id="no" value="1" <?php echo($rango == "1") ? 'checked="checked"' : ''; ?>>
           No
         </label>
       </div>
       <div class="radio">
         <label>
-          <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
+          <input type="radio" name="rango" id="indistinto" value="2" <?php echo($rango == "2") ? 'checked="checked"' : ''; ?>>
           ¡Me es indistinto!
         </label>
       </div>
@@ -125,19 +168,25 @@
 
           <div class="form-group">
             <label for="exampleInputPassword1">E-mail</label>
-            <input type="email" class="form-control" id="exampleInputPassword1" placeholder="" required>
+            <input type="text" class="form-control" id="email" name="email" value="<?php echo $email; ?>" placeholder="Ingrese Email">
           </div>
 
           <div class="form-group">
             <label for="exampleInputPassword1">Contraseña</label>
-            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="" required>
+            <input type="password" class="form-control" name="contrasena" id="contrasena" placeholder="" >
           </div>
 
 
           <div class="form-group">
             <label for="exampleInputPassword1">Repetí tu contraseña</label>
-            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="" required>
+            <input type="password" class="form-control" name="contrasena_confirm" id="contrasena_confirm" placeholder="" >
           </div>
+
+          <div class="checkbox">
+					<label>
+						<input type="checkbox" id="chk-terminos" name="terminos"> Acepto los términos y condiciones
+					</label>
+				</div>
 
           <input type="submit" class="btn btn-primary btn-lg btn-block" name="btn_submit" value="Regístrate"/>
   			</form>
