@@ -194,7 +194,7 @@ if($_POST)
 					</label>
 				</div>
 
-          <input type="submit" class="btn btn-primary btn-lg btn-block" name="btn_submit" value="Regístrate"/>
+          <input type="submit" class="btn btn-primary btn-lg btn-block"  value="Regístrate"/>
   			</form>
 
   	  </div>
