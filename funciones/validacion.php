@@ -6,16 +6,22 @@ function validate(array $datos)
 {
 	$errores = [];
 
-	if(!isset($datos['nombre']) ||
-		trim($datos['nombre']) == '')
+	if(!isset($datos['name']) ||
+		trim($datos['name']) == '')
 	{
-		$errores['nombre'] = 'Debe ingresar un nombre';
+		$errores['name'] = 'Debe ingresar un nombre';
 	}
 
-	if(!isset($datos['apellido']) ||
-		trim($datos['apellido']) == '')
+	if(!isset($datos['surname']) ||
+		trim($datos['surname']) == '')
 	{
-		$errores['apellido'] = 'Debe ingresar un apellido';
+		$errores['surname'] = 'Debe ingresar un apellido';
+	}
+
+	if(!isset($datos['username']) ||
+		trim($datos['username']) == '')
+	{
+		$errores['username'] = 'Debe ingresar un apellido';
 	}
 
 
@@ -34,18 +40,18 @@ function validate(array $datos)
 	}
   */
 
-	if(strlen($datos['contrasena']) < PASSWORD_MIN_LENGTH)
+	if(strlen($datos['password']) < PASSWORD_MIN_LENGTH)
 	{
-		$errores['contrasena'] = 'El contraseña debe tener al menos ' . PASSWORD_MIN_LENGTH . ' caracteres';
+		$errores['password'] = 'El contraseña debe tener al menos ' . PASSWORD_MIN_LENGTH . ' caracteres';
 	}
-	elseif($datos['contrasena'] != $datos['contrasena_confirm'])
+	elseif($datos['password'] != $datos['password_confirm'])
 	{
-		$errores['contrasena_confirm'] = 'El contraseña y su confirmacióm deben coincidir';
+		$errores['password_confirm'] = 'La contraseña y su confirmacióm deben coincidir.';
 	}
 
-	if(!isset($datos['genero']))
+	if(!isset($datos['sex']))
 	{
-		$errores['genero'] = 'Debe seleccionar su sexo';
+		$errores['sex'] = 'Debe seleccionar su sexo';
 	}
 
 /*
@@ -58,9 +64,14 @@ function validate(array $datos)
 	}
 */
 
-	if(!isset($datos['terminos']))
+	if(!isset($datos['time_to_run']) || count($datos['time_to_run']) < 1)
 	{
-		$errores['terminos'] = 'Debe aceptar los términos y condiciones';
+		$errores['time_to_run'] = 'Debe seleccionar al menos ' . 1 . ' horario.';
+	}
+
+	if(!isset($datos['terms']))
+	{
+		$errores['terms'] = 'Debe aceptar los términos y condiciones';
 	}
 
 	return $errores;

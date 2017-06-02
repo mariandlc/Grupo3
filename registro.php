@@ -2,13 +2,13 @@
 
 require_once('funciones/usuarios.php');
 
-$nombre = isset($_POST['nombre']) ? $_POST['nombre'] : null;
-$apellido = isset($_POST['apellido']) ? $_POST['apellido'] : null;
+$nombre = isset($_POST['name']) ? $_POST['name'] : null;
+$apellido = isset($_POST['surname']) ? $_POST['surname'] : null;
+$username = isset($_POST['username']) ? $_POST['username'] : null;
 $email = isset($_POST['email']) ? $_POST['email'] : null;
-$genero = isset($_POST['genero']) ? $_POST['genero'] : null;
-$horario = isset($_POST['horario']) ? $_POST['horario'] : null;
-$rango = isset($_POST['rango']) ? $_POST['rango'] : null;
-
+$genero = isset($_POST['sex']) ? $_POST['sex'] : null;
+$horario= $_POST['time_to_run'] ?? [];
+$rango = isset($_POST['age_range_to_run']) ? $_POST['age_range_to_run'] : null;
 
 
 $errores = [];
@@ -101,90 +101,96 @@ if($_POST)
 
   			<form role="form" action="" method="post" enctype="multipart/form-data">
   			  <div class="form-group">
-  			    <label for="exampleInputEmail1">Nombre</label>
-  			    <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ingrese nombre" value=" <?php echo $nombre; ?>">
+  			    <label for="name">Nombre</label>
+  			    <input type="text" class="form-control" id="name" name="name" placeholder="Ingrese nombre" value=" <?php echo $nombre; ?>">
   			  </div>
 
           <div class="form-group">
-            <label for="exampleInputEmail1">Apellido</label>
-            <input type="text" class="form-control" id="apellido" name="apellido" value=" <?php echo $apellido; ?>" placeholder="Ingrese su apellido" >
+            <label for="surname">Apellido</label>
+            <input type="text" class="form-control" id="surname" name="surname" value=" <?php echo $apellido; ?>" placeholder="Ingrese su apellido" >
+          </div>
+          <div class="form-group">
+            <label for="username">Nombre de usuario</label>
+            <input type="text" class="form-control" id="username" name="username" placeholder="Ingrese nombre" value=" <?php echo $username; ?>">
           </div>
 
           <div class="form-group">
-            <label for="exampleInputEmail1">Fecha de nacimiento</label>
-            <input type="date" class="form-control" id="exampleInputEmail1" placeholder="" required>
+            <label for="date">Fecha de nacimiento</label>
+            <input type="date" class="form-control" id="date" name="date" placeholder="" required>
           </div>
 
           <div class="radio">
             <label class="radio-inline">
-              <input type="radio" name="genero" id="genero_masculino" value="0"  <?php echo($genero === "0") ? 'checked="checked"' : ''; ?>> Hombre
+              <input type="radio" name="sex" id="male" value="0"  <?php echo($genero === "0") ? 'checked="checked"' : ''; ?>> Hombre
             </label>
             <label class="radio-inline">
-              <input type="radio" name="genero" id="genero_femenino" value="1"  <?php echo($genero == "1") ? 'checked="checked"' : ''; ?>> Mujer
+              <input type="radio" name="sex" id="female" value="1"  <?php echo($genero == "1") ? 'checked="checked"' : ''; ?>> Mujer
             </label>
           </div>
 
 
-            <label for="exampleInputEmail1">¿En qué momento del día podes correr?</label>
-            <div class="radio">
+        <label for="time_to_run">
+          ¿En qué momento del día podes correr?</label>
+        <div class="checkbox">
           <label>
-            <input type="radio" name="horario" id="mañana" value="0" <?php echo($horario === "0") ? 'checked="checked"' : ''; ?>>
+            <input type="checkbox" name="time_to_run[]" id="morning_run" value="0" <?php echo($horario === "0") ? 'checked="checked"' : ''; ?>>
             A la mañana
           </label>
-        </div>
-        <div class="radio">
+          
           <label>
-            <input type="radio" name="horario" id="tarde" value="1" <?php echo($horario == "1") ? 'checked="checked"' : ''; ?>>
+            <input type="checkbox" name="time_to_run[]" id="afternoon_run" value="1" <?php echo($horario == "1") ? 'checked="checked"' : ''; ?>>
             A la tarde
           </label>
-        </div>
-        <div class="radio">
+    
           <label>
-            <input type="radio" name="horario" id="noche" value="2" <?php echo($horario == "2") ? 'checked="checked"' : ''; ?>>
+            <input type="checkbox" name="time_to_run[]" id="night_run" value="2" <?php echo($horario == "2") ? 'checked="checked"' : ''; ?>>
             A la noche
           </label>
         </div>
 
-        <label for="exampleInputEmail1">¿Te gustaria correr con personas en tu rango de edad?</label>
+        <label for="age_range_to_run">
+          ¿Te gustaria correr con personas en tu rango de edad?
+        </label>
         <div class="radio">
         <label>
-          <input type="radio" name="rango" id="si" value="0" <?php echo($rango === "0") ? 'checked="checked"' : ''; ?>>
+          <input type="radio" name="age_range_to_run" id="" value="0" <?php echo($rango === "0") ? 'checked="checked"' : ''; ?>>
           Si
         </label>
       </div>
       <div class="radio">
         <label>
-          <input type="radio" name="rango" id="no" value="1" <?php echo($rango == "1") ? 'checked="checked"' : ''; ?>>
+          <input type="radio" name="age_range_to_run" id="" value="1" <?php echo($rango == "1") ? 'checked="checked"' : ''; ?>>
           No
         </label>
       </div>
       <div class="radio">
         <label>
-          <input type="radio" name="rango" id="indistinto" value="2" <?php echo($rango == "2") ? 'checked="checked"' : ''; ?>>
+          <input type="radio" name="age_range_to_run" id="indistinto" value="2" <?php echo($rango == "2") ? 'checked="checked"' : ''; ?>>
           ¡Me es indistinto!
         </label>
       </div>
 
 
           <div class="form-group">
-            <label for="exampleInputPassword1">E-mail</label>
+            <label for="email">E-mail</label>
             <input type="text" class="form-control" id="email" name="email" value="<?php echo $email; ?>" placeholder="Ingrese Email">
           </div>
+        
 
           <div class="form-group">
-            <label for="exampleInputPassword1">Contraseña</label>
-            <input type="password" class="form-control" name="contrasena" id="contrasena" placeholder="" >
+            <label for="password">Contraseña</label>
+            <input type="password" class="form-control" name="password" id="password" placeholder="" >
           </div>
 
 
           <div class="form-group">
-            <label for="exampleInputPassword1">Repetí tu contraseña</label>
-            <input type="password" class="form-control" name="contrasena_confirm" id="contrasena_confirm" placeholder="" >
+            <label for="password_confirm">Repetí tu contraseña</label>
+            <input type="password" class="form-control" name="password_confirm" id="password_confirm" placeholder="" >
           </div>
 
           <div class="checkbox">
 					<label>
-						<input type="checkbox" id="chk-terminos" name="terminos"> Acepto los términos y condiciones
+						<input type="checkbox" id="terms" name="terms"> Acepto los términos y condiciones
 					</label>
 				</div>
 
