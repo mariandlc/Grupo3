@@ -5,7 +5,7 @@ define('USERS_FILE', 'users.json');
 require_once('validacion.php');
 
 function registrar(array $post){
-	
+
 	$datos = $post;
 
 	if(!$errores = validate($datos)){
@@ -18,7 +18,7 @@ function registrar(array $post){
 
 // not yet
 
-/*function checkDuplicado($field, $value)
+function checkDuplicado($field, $value)
 {
 
 	$usuarios = listUsers();
@@ -32,18 +32,18 @@ function registrar(array $post){
 	}
 
 	return false;
-}*/
+}
 
 function saveUsersFile(array $users = [])
 {
 	$content = [
-		'usuarios' => $users 
+		'usuarios' => $users
 	];
-	
+
 	$writable = ( is_writable('users.json') ) ? true : chmod('users.json', 0755);
 
 	if ( $writable ) {
-	    echo file_put_contents('users.json', json_encode($content)); 
+	    echo file_put_contents('users.json', json_encode($content));
 	} else {
 	    echo "FAIL PERMISSION";
 	}
@@ -58,7 +58,7 @@ function listUsers()
 	if(!file_exists(USERS_FILE))
 	{
 		saveUsersFile();
-		
+
 	}
 
 	$usuarios = file_get_contents(USERS_FILE);
@@ -103,7 +103,7 @@ function nextId()
 	}
 
 	foreach($usuarios as $usuario){
-		
+
 		if($id < $usuario['id'])
 		{
 			$id = $usuario['id'];
@@ -113,5 +113,86 @@ function nextId()
 	return $id + 1;
 }
 
+function loguearUsuario(array $datos)
+{
+	//Chequear existencia del mail
+
+	if(!($user = checkDuplicado('email', $datos['email'])) )
+	{
+			return ['email' => 'El email ingresado no está registrado en nuestra base de datos'];
+	}
+
+	//Chequear el password
+	if(!password_verify($datos['password'], $user['password']))
+	{
+			return ['password' => 'El password ingresado es inválido'];
+	}
+
+	//Guardamos en la Session
+	guardarUserEnSession($user);
+
+	//Suponiendo que chequeo el recordarme,
+	if(isset($datos['recordarme']))
+	{
+			//Guardarmos la cookie de remember
+			setcookie('fs05_user', $user['id'], 5*365*24*60*60+time());
+	}
+
+
+	return [];
+
+}
+
+
+function logout()
+{
+
+	//Borrar la variable user de la session
+	unset($_SESSION['user']);
+
+	//Destruir la session
+	session_destroy();
+
+	//Borrar la cookie de recordarme
+	setcookie('fs05_user', 0, time() * -1);
+
+}
+
+function isUserLoggedIn()
+{
+	return isset($_SESSION['user']);
+}
+
+
+function autologuearUsuario()
+{
+	//Chequear si ya esta logueado
+	//Si no,
+	if(!isUserLoggedIn() && isset($_COOKIE['fs05_user']))
+	{
+			//Leer cookie
+			$userId = $_COOKIE['fs05_user'];
+
+			//buscamos el usuario
+			$user = checkDuplicado('id', $userId);
+
+			//Lo escribimos en la Session
+			if($user)
+			{
+				guardarUserEnSession($user);
+			}
+
+
+	}
+
+		//leer cookie, buscamos el usuario y lo escribimos en la Session
+
+}
+
+function guardarUserEnSession($user)
+{
+	unset($user['password']);
+	$_SESSION['user'] = $user;
+}
 
  ?>

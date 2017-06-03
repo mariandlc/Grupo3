@@ -1,49 +1,12 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Home</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+<?php
 
-    <link rel="stylesheet" href="css/style.css">
+require_once('requires.php');
 
-  </head>
-  <body>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container-fluid">
+abrirHtml('Inicio', '');
+cabecera();
 
-        <!-- Logo -->
-        <div class="navbar-header">
 
-          <button type="button" class="navbar-toggle " data-toggle="collapse" data-target="#mainNavBar">
-            <spam class="icon-bar"></spam>
-            <spam class="icon-bar"></spam>
-            <spam class="icon-bar"></spam>
-          </button>
-
-          <a href="index.html" class="navbar-brand">
-            <!-- <img src="images/logo.jpg" width="55" height="50" alt="">-->
-            Run Argentina
-          </a>
-        </div>
-
-        <!-- Menu -->
-        <div class="collapse navbar-collapse " id="mainNavBar">
-          <ul class="nav navbar-nav">
-            <li><a href="preguntasfrecuentes.html">Preguntas frecuentes</a></li>
-          </ul>
-
-        <!--right align-->
-          <ul id="ul-right" class="nav navbar-nav navbar-right">
-            <li><a href="login.html">Inicia sesión</a></li>
-            <li><a href="registro.php">Regístrate</a></li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+ ?>
 
       <div id="carousel-example-generic" class="carousel slide carusel-home" data-ride="carousel">
         <!-- Indicators -->
@@ -191,10 +154,7 @@
       </section>
 
 
-
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
-  </body>
-</html>
+<?php
+footer();
+cerrarHtml();
+?>

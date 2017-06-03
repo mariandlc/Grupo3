@@ -32,13 +32,11 @@ function validate(array $datos)
 	{
 		$errores['email'] = 'Debe ingresar un email válido';
 	}
-  //HACER CHECKDUPLICADO
-  /*
   elseif(checkDuplicado('email', $datos['email'])) //chequear que el mail no exista aun
 	{
 		$errores['email'] = 'El mail ingresado ya existe en nuestra base de datos';
 	}
-  */
+
 
 	if(strlen($datos['password']) < PASSWORD_MIN_LENGTH)
 	{
@@ -49,9 +47,9 @@ function validate(array $datos)
 		$errores['password_confirm'] = 'La contraseña y su confirmacióm deben coincidir.';
 	}
 
-	if(!isset($datos['sex']))
+	if(!isset($datos['gender']))
 	{
-		$errores['sex'] = 'Debe seleccionar su sexo';
+		$errores['gender'] = 'Debe seleccionar su sexo';
 	}
 
 /*
@@ -77,6 +75,24 @@ function validate(array $datos)
 	return $errores;
 }
 
+function validarLogin(array $datos)
+{
+	$errores = [];
 
+	if(!isset($datos['email']) ||
+		!filter_var($datos['email'], FILTER_VALIDATE_EMAIL)
+	)
+	{
+		$errores['email'] = 'Debe ingresar un email válido';
+	}
+
+	if(trim($datos['password']) == '')
+	{
+		$errores['password'] = 'Debe ingresar un password';
+	}
+
+	return $errores;
+
+}
 
  ?>
