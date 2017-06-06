@@ -1,5 +1,4 @@
 <?php
-
 require_once('requires.php');
 
 abrirHtml('Preguntas frecuentes', '');

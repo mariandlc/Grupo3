@@ -1,7 +1,5 @@
 <?php
-
 require_once('requires.php');
-
 
 $nombre = isset($_POST['name']) ? $_POST['name'] : null;
 $apellido = isset($_POST['surname']) ? $_POST['surname'] : null;

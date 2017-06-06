@@ -1,12 +1,9 @@
 <?php
-
 require_once('requires.php');
+?>
 
-abrirHtml('Inicio', '');
-cabecera();
-
-
- ?>
+<?php abrirHtml('Inicio', ''); ?>
+<?php cabecera(); ?>
 
       <div id="carousel-example-generic" class="carousel slide carusel-home" data-ride="carousel">
         <!-- Indicators -->
@@ -154,7 +151,5 @@ cabecera();
       </section>
 
 
-<?php
-footer();
-cerrarHtml();
-?>
+<?php footer(); ?>
+<?php cerrarHtml(); ?>

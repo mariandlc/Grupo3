@@ -1,15 +1,15 @@
 <?php
+require_once('validacion.php');
 
 define('USERS_FILE', 'users.json');
 
-require_once('validacion.php');
 
 function registrar(array $post){
 
 	$datos = $post;
 
-	if(!$errores = validate($datos)){
-	    echo "OKK";
+	if(!$errores = validate($datos))
+	{
 	    saveUser($datos);
 	}
 
@@ -40,10 +40,10 @@ function saveUsersFile(array $users = [])
 		'usuarios' => $users
 	];
 
-	$writable = ( is_writable('users.json') ) ? true : chmod('users.json', 0755);
+	$writable = ( is_writable(USERS_FILE) ) ? true : chmod(USERS_FILE, 0755);
 
 	if ( $writable ) {
-	    echo file_put_contents('users.json', json_encode($content));
+	    file_put_contents(USERS_FILE, json_encode($content));
 	} else {
 	    echo "FAIL PERMISSION";
 	}

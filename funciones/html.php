@@ -54,7 +54,9 @@ function cabecera()
 
           if(isUserLoggedIn())
           {
-            echo '<li><a href="logout.php">Logout</a></li>';
+						echo '<li style="font-size:16px;"><a style="color:cyan;">Hola, '.$_SESSION['user']['name'].'</a></li>;
+            <li><a href="logout.php">Logout</a></li>';
+
           }
           else {
             echo '<li><a href="login.php">Inicia sesión</a></li>
