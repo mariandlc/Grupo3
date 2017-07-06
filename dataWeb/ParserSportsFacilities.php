@@ -1,10 +1,10 @@
 <?php 
 
-require_once('InfoWeb.php');
+require_once('DataWeb.php');
 
 $url = 'http://sportsfacilities.com.ar/carreras/';
 
-$infoSports = InfoWeb::createInfoWeb($url);
+$infoSports = DataWeb::createDataWeb($url);
 
 // images
 $images = [];
@@ -22,7 +22,7 @@ $nodeList = $infoSports ->query("//*[@class='span12 modern_style']//a/@href");
 //*[@id="tribe-events-content"]/div[1]/div[2]/div/div/div/div[2]/div[1]/h3
 foreach ($nodeList as $node) {
 	
-	$infoSportsLinkInside = new InfoWeb($node ->nodeValue);
+	$infoSportsLinkInside = new DataWeb($node ->nodeValue);
 	
 	//title
 	$nodeH1 = $infoSportsLinkInside  ->query("//h1");

@@ -1,19 +1,19 @@
 <?php
 
-class InfoWeb
+class DataWeb
 {
     
     private $xpath;
 
 
-    public static function createInfoWeb($url) {
+    public static function createDataWeb($url) {
 
         $array = get_headers($url);
 
         $string = $array[0];
 
         if(strpos($string,"200"))
-            return new InfoWeb($url);
+            return new DataWeb($url);
         
         return null;
     

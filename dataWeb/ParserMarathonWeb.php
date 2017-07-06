@@ -1,5 +1,5 @@
 <?php 
-require_once('InfoWeb.php');
+require_once('DataWeb.php');
 
 define("DATE", "Fecha:");
 define("HOUR", "Horario:");
@@ -10,7 +10,7 @@ define("PLACE", "Lugar:");
 
 $url = 'http://maraton.com.ar/calendario-de-carreras/';
 
-$infoSports = InfoWeb::createInfoWeb($url);
+$infoSports = DataWeb::createDataWeb($url);
 
 
 
@@ -25,7 +25,7 @@ foreach ($nodeList as $node) {
 
 foreach ($links as $link) {
 	
-	$info = new InfoWeb($link);
+	$info = new DataWeb($link);
 	
 
 	//title 

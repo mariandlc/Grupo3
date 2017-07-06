@@ -1,5 +1,5 @@
 <?php 
-require_once('InfoWeb.php');
+require_once('DataWeb.php');
 
 $url = 'https://iloverunn.com.ar/myrunn/index.php/category/dates-2/';
 
@@ -7,7 +7,7 @@ $url = 'https://iloverunn.com.ar/myrunn/index.php/category/dates-2/';
 
 $contPage = 2;
 
-while ($infoLoveRun = InfoWeb::createInfoWeb($url)){
+while ($infoLoveRun = DataWeb::createDataWeb($url)){
 
 
 	$images = [];
@@ -27,7 +27,7 @@ while ($infoLoveRun = InfoWeb::createInfoWeb($url)){
 		echo '<br>';
 
 		// info inside each link
-		$infoLoveRunLinkInside = new InfoWeb($node ->nodeValue);
+		$infoLoveRunLinkInside = new DataWeb($node ->nodeValue);
 		// titule link
 		$nodeH1 = $infoLoveRunLinkInside ->query("//h1");
 		if (!empty($nodeH1 ->item(0))){
