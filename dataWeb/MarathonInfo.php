@@ -20,7 +20,9 @@ class MarathonInfo
 
  	protected $price = null;
 
- 	protected $oficialSite = null;
+ 	protected $referenceLink = null;
+
+ 	protected $subscribeLink = null;
  	
  	function __construct($title, $img)
  	{
@@ -51,9 +53,14 @@ class MarathonInfo
  	{
  		return $this ->place;
  	}
- 	public function getOficialSite()
+ 	public function getreferenceLink()
  	{
- 		return $this ->oficialSite;		
+ 		return $this ->referenceLink;		
+ 	}
+
+ 	public function getsubscribeLink($value)
+ 	{
+ 		return $this ->subscribeLink;
  	}
 
 
@@ -70,9 +77,14 @@ class MarathonInfo
  	{
  		$this ->description = $value;
  	}
- 	public function setOficialSite($value)
+ 	public function setreferenceLink($value)
  	{
- 		$this ->oficialSite = $value;		
+ 		$this ->referenceLink = $value;		
+ 	}
+
+ 	public function setSubscribeLink($value)
+ 	{
+ 		$this ->subscribeLink = $value;
  	}
 	
 

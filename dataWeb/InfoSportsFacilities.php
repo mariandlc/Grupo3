@@ -91,17 +91,6 @@ foreach ($nodeList as $node) {
 
 }
 
-/*$nodeList = $infoSports ->query("//*[@class='span12 imge']//img/@src");
-
-//*[@id="tribe-events-content"]/div[1]/div[2]/div/div/div/div[2]/div[1]/h3
-foreach ($nodeList as $node) {
-	
-	echo "<pre>";
-	var_dump($node);
-	echo "</pre>";
-	
-}
-*/
 
 $nodeList = $infoSports ->query("//*[@class='tribe-events-single-section-title']");
 
