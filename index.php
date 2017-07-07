@@ -15,6 +15,7 @@ require_once('requires.php');
 
         <!-- Wrapper for slides -->
         <div class="carousel-inner" role="listbox">
+
             <div class="item active">
               <img src="images/run1.jpg" alt="">
               <div class="carousel-caption">
@@ -54,6 +55,7 @@ require_once('requires.php');
       <section class="places-run-bsas">
         <h2>Lugares para correr en Buenos Aires</h2>
         <article class="palermo">
+
           <div class="row">
 
             <div class="col-xs-12 col-sm-12 col-md-6">

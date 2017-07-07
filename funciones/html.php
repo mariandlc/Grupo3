@@ -10,12 +10,8 @@ function abrirHtml($title, $description)
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <title>Registración</title>
       <link href="css/bootstrap.min.css" rel="stylesheet">
-
       <link rel="stylesheet" href="css/style.css">
-
-        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-
+      <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
     </head>
     <body>
 	';
@@ -84,8 +80,8 @@ function footer()
 function cerrarHtml()
 {
 	echo '
-		<script src="assets/libs/jquery/jquery-1.11.1.min.js"></script>
-		<script src="assets/libs/bootstrap-3/js/bootstrap.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
 	</body>
 	</html>
 	';
