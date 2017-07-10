@@ -11,7 +11,7 @@ function abrirHtml($title, $description)
       <title>Registración</title>
       <link href="css/bootstrap.min.css" rel="stylesheet">
       <link rel="stylesheet" href="css/style.css">
-      <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+			<link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
     </head>
     <body>
 	';
@@ -82,6 +82,10 @@ function cerrarHtml()
 	echo '
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
+		<script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+		<script>
+	AOS.init();
+	</script>
 	</body>
 	</html>
 	';
