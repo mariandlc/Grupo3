@@ -10,6 +10,7 @@ function abrirHtml($title, $description)
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <title>Registración</title>
       <link href="css/bootstrap.min.css" rel="stylesheet">
+			<link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
       <link rel="stylesheet" href="css/style.css">
 			<link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
     </head>
@@ -73,7 +74,7 @@ function cabecera()
 function footer()
 {
 	echo '
-		<div class="text-center">&copy; ' . date('Y') . '</div>
+		<div class="text-center">&copy; ' . date('Y') . '
 	';
 }
 
