@@ -1,9 +1,55 @@
+@font-face {
+    font-family: 'catamaranbold';
+    src: url('../fonts/Catamaran/catamaran-bold-webfont.woff2') format('woff2'),
+         url('../fonts/Catamaran/catamaran-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'catamaranmedium';
+    src: url('../fonts/Catamaran/catamaran-medium-webfont.woff2') format('woff2'),
+         url('../fonts/Catamaran/catamaran-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'catamaranregular';
+    src: url('../fonts/Catamaran/catamaran-regular-webfont.woff2') format('woff2'),
+         url('../fonts/Catamaran/catamaran-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
-  background-color: #dfdddd;
-    padding-top: 100px;
+  font-family: 'catamaranmedium', sans-serif;
+  padding-top: 50px;
+  background-image: url("../images/LogoRunArgentinaRepeticion.gif") repeat;
+  background-position: 0px 150px;
+  background-image: linear-gradient(to bottom, rgba(255,255,255,0.6) 0%,rgba(255,255,255,0.8) 100%), url("../images/LogoRunArgentinaRepeticion.gif");
+  background-size: 25%;
+}
+
+.logo {
+  position: absolute;
+  margin: auto;
+  top: 45%;
+  left: 80%;
+}
+
+.imglogo > img {
+  height: 110px;
+  width: auto;
 }
 
 .carousel {
+  position: relative;
+}
+
+.frecuentes {
   position: relative;
 }
 
@@ -26,8 +72,6 @@ body {
   padding: 0;
 }
 
-
-
 /* edit carusel bootstrap just to fix img{height} & position carusel */
 .carousel-inner > .item > img, .carousel-inner > .item > a > img {
     display: block;
@@ -35,50 +79,114 @@ body {
     line-height: 1;
     margin: 0 auto;
     max-width: 100%;
+  }
+
 }
 .carousel {
   position: relative;
   bottom: 50px;
 }
 
-/*
-@media only screen and (max-width : 765px) {
-  #ul-right{
-    display:none;
-  }
-}
-*/
+/* ACA TERMINA EL CARROUSE */
 
-.places-run-bsas h2{
+/* ACA EMPIEZAN LOS BOXES */
+
+.container {
+  position: relative;
+  width: 99%;
+}
+
+.container > .cajas {
+  position: relative;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.container > .cajas > .caja {
+  position: relative;
+  width: 25%;
+  height: auto;
+}
+
+.container > .cajas > .caja > .titulocaja > p {
+  text-align: center;
+  font-size: 25px;
+}
+
+.container > .cajas > .caja > .maincaja {
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.imgcaja1 {
+  position: absolute;
+  top: 100%;
+  left: 1%;
+  right: 1%;
+  bottom: 1%;
+  filter: opacity(98%) grayscale(80%);
+  transition: top 1s;
+}
+
+.maincaja:hover .imgcaja1 {
+  top: 30%;
+}
+
+.container > .cajas > .caja > .maincaja > .imgcaja1 > img {
+  width: 100%;
+  height: 100%;
+}
+
+.container > .cajas > .caja > .maincaja > .imgcaja {
+  position: relative;
+}
+
+.container > .cajas > .caja > .maincaja > .imgcaja > img {
+  max-width: 100%;
+}
+
+
+.container > .cajas > .caja > .tagscaja > p {
+  text-align: center;
+  font-size: 18px;
+  position: relative;
+}
+
+/* ACA TERMINAN LOS BOXES */
+
+/*.places-run-bsas h2{
   text-align: center;
 }
 
-.places-run-bsas article{
+.places-run-bsas article {
   margin-top: 50px;
   margin-bottom: 50px;
 }
 
-.places-run-bsas article img{
+.places-run-bsas article img {
   width: 100%;
   display: inline-block;
   padding-top: 30px;
-}
+}*/
 
-
-footer {
+.text-center {
+  position: absolute;
   width: 100%;
-  position:absolute;
-  bottom:0;
-  left:0;
-  right: 0;
   background-color: #030202;
-  height: 100px;
+  height: 60px;
 }
 
-.copyright{
+.copyright {
   color: #f1f1f1;
   padding-top: 37.5px;
 }
+
+
+/*DE ACÁ PARA ABAJO ESTÁN TODOS LOS MEDIA QUERYS*/
+
 
 @media all and (min-width: 766px) and (orientation:landscape) {
   .titulo {
@@ -89,6 +197,20 @@ footer {
 @media all and (min-width: 766px) and (orientation:portrait) {
   .titulo {
     top: 20%;
+  }
+}
+
+@media all and (max-width: 766px) and (orientation:portrait) {
+  body {
+    background-image: none;
+    background-color: white;
+  }
+}
+
+@media all and (max-width: 1024px) and (orientation:landscape) {
+  body {
+    background-image: none;
+    background-color: white;
   }
 }
 
@@ -127,3 +249,12 @@ footer {
     right: 0;
   }
 }
+
+
+/*
+@media only screen and (max-width : 765px) {
+  #ul-right{
+    display:none;
+  }
+}
+*/

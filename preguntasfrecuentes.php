@@ -1,13 +1,12 @@
 <?php
 require_once('requires.php');
+?>
 
-abrirHtml('Preguntas frecuentes', '');
-cabecera();
-
-
- ?>
+<?php abrirHtml('Preguntas frecuentes', ''); ?>
+<?php cabecera(); ?>
 
 
+  <div class="frecuentes">
 
     <div class="col-xs-0 col-sm-4 col-md-3">
     </div>
@@ -48,10 +47,6 @@ cabecera();
     <div class="col-xs-0 col-sm-4 col-md-3">
 
     </div>
+  </div>
 
-
-
-<?php
-footer();
-cerrarHtml();
-?>
+  <?php cerrarHtml(); ?>
