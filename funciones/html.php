@@ -74,7 +74,7 @@ function cabecera()
 function footer()
 {
 	echo '
-		<div class="text-center">&copy; ' . date('Y') . '
+		<div style="margin-top:40px;" class="text-center">&copy; ' . date('Y') . '</div>
 	';
 }
 
@@ -87,6 +87,7 @@ function cerrarHtml()
 		<script>
 	AOS.init();
 	</script>
+	<script src="js/script.js"></script>
 	</body>
 	</html>
 	';

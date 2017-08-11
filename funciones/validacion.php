@@ -60,12 +60,12 @@ function validate(array $datos)
 	{
 		$errores['fnac_dia'] = 'La fecha de nacimiento es inválida';
 	}
-*/
+
 
 	if(!isset($datos['time_to_run']) || count($datos['time_to_run']) < 1)
 	{
 		$errores['time_to_run'] = 'Debe seleccionar al menos ' . 1 . ' horario.';
-	}
+	}*/
 
 	if(!isset($datos['terms']))
 	{
