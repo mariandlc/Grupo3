@@ -34,13 +34,13 @@ cabecera();
 			} ?>
 		</div>
 	<?php } ?>
-
+	<div class="container" style="height:100vh">
 
     <div class="col-xs-0 col-sm-4 col-md-4">
 
     </div>
 
-    <div class="col-xs-12 col-sm-4 col-md-4">
+    <div class="col-xs-12 col-sm-4 col-md-4" style="margin-top:100px">
 
       <form method="post" action="">
         <div class="form-group">
@@ -69,6 +69,7 @@ cabecera();
     <div class="col-xs-0 col-sm-4 col-md-4">
 
     </div>
+	</div>
 
 <?php
 footer();

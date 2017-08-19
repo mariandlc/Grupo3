@@ -51,6 +51,8 @@ body {
 
 .frecuentes {
   position: relative;
+  margin-top: 100px;
+  bottom: 50px;
 }
 
 .titulo {
@@ -176,7 +178,7 @@ body {
   position: absolute;
   width: 100%;
   background-color: #030202;
-  height: 60px;
+  height: 70px;
 }
 
 .copyright {
