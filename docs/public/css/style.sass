@@ -50,7 +50,55 @@ body
     display: flex
     flex-flow: column
     align-items: center
-    // publication style
+    //create  publication style
+    .create-post
+      display: flex
+      width: 95%
+      background-color: $background-color
+    .user-img
+      min-width: 50px
+      min-height: 50px
+      width: 50px
+      height: 50px
+      border-radius: 50px
+      margin-top: 5px
+      margin-left: 2px
+    .form-publication
+      display: flex
+      flex-flow: row wrap
+      justify-content: space-between
+      margin-left: 10px
+      margin-top: 10px
+      margin-right: 10px
+      width: 100%
+      .text-form
+        border-radius: 5px
+        border-width: 1px
+        border-style: solid
+        border-color: rgb(166, 166, 166)
+        outline: none
+        margin-bottom: 10px
+        width: 100%
+      #form-files
+        position: relative
+        width: 100px
+      #btn_file
+        position: absolute
+        top: 0
+        bottom: 0
+        left: 0
+        right: 0
+        width: 100%
+        height: 100%
+        opacity: 0
+      #submit-publication
+        color: #FFF
+        background: rgb(237, 21, 21)
+        border: none
+        border-radius: 5px
+        margin-bottom: 10px
+    //create publication style END
+    // Publication style
     .publication
       width: 95%
       height: 150px

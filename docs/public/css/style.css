@@ -70,6 +70,65 @@ body {
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center; }
+    .container .item-publications .create-post {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      width: 95%;
+      background-color: #ffffff; }
+    .container .item-publications .user-img {
+      min-width: 50px;
+      min-height: 50px;
+      width: 50px;
+      height: 50px;
+      border-radius: 50px;
+      margin-top: 5px;
+      margin-left: 2px; }
+    .container .item-publications .form-publication {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+      flex-flow: row wrap;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      margin-left: 10px;
+      margin-top: 10px;
+      margin-right: 10px;
+      width: 100%; }
+      .container .item-publications .form-publication .text-form {
+        border-radius: 5px;
+        border-width: 1px;
+        border-style: solid;
+        border-color: #a6a6a6;
+        outline: none;
+        margin-bottom: 10px;
+        width: 100%; }
+      .container .item-publications .form-publication #form-files {
+        position: relative;
+        width: 100px; }
+      .container .item-publications .form-publication #btn_file {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0; }
+      .container .item-publications .form-publication #submit-publication {
+        color: #FFF;
+        background: #ed1515;
+        border: none;
+        border-radius: 5px;
+        margin-bottom: 10px; }
     .container .item-publications .publication {
       width: 95%;
       height: 150px;
