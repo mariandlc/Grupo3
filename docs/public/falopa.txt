@@ -45,3 +45,10 @@ pruebas publicacion
 <div class="event">Lagos de palermo - 20pm</div>
 <div class="event">Olivos - 9am</div>
 <div class="event">Lagos de palermo - 20pm</div>
+
+
+
+<article class="publication-container">Publicacion2</article>
+<article class="publication-container">Publicacion3</article>
+<article class="publication-container">Publicacion4</article>
+<article class="publication-container">Publicacion5</article>

@@ -52,6 +52,7 @@ body
     align-items: center
     //create  publication style
     .create-post
+      margin-top: 20px
       display: flex
       width: 95%
       background-color: $background-color
@@ -62,7 +63,7 @@ body
       height: 50px
       border-radius: 50px
       margin-top: 5px
-      margin-left: 2px
+      margin-left: 5px
     .form-publication
       display: flex
       flex-flow: row wrap
@@ -99,11 +100,35 @@ body
         margin-bottom: 10px
     //create publication style END
     // Publication style
-    .publication
+    .publication-container
       width: 95%
       height: 150px
       margin: 10px
       background-color: $background-color
+      display: flex
+      height: auto
+    .detail-publication
+      margin-left: 10px
+      display: flex
+      flex-flow: row wrap
+      margin-right: 10px
+      .user-info-publication
+        width: 100%
+      .comments-publication
+        height: auto
+      .comment-publication
+        display: flex
+        background-color: $primary-color
+        margin-top: 10px
+        margin-bottom: 10px
+        .detail-comment-publication
+          margin-left: 10px
+          display: flex
+          flex-flow: row wrap
+      .text-comment-publication
+        margin-left: 10px
+
+
 .item-map
   display: none
   #map
