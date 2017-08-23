@@ -36,6 +36,12 @@ body {
 .icon-nav {
   width: 50px; }
 
+.line-divider {
+  height: 1px;
+  background: #717171;
+  border-bottom: 1px solid #e7e7e7;
+  width: 100%; }
+
 .container {
   margin-top: 10px;
   margin-left: 0px;
