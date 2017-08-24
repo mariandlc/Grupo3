@@ -1,3 +1,5 @@
+@import _colors.sass
+@import _mixins.sass
 // Logo
 #logo
   position: fixed
@@ -5,6 +7,29 @@
   top: 10px
   left: 10px
   height: 35px
+
+//<-- NAV SMARPHONE AND TABLE
+.flex-nav-container
+    background: $background-color
+    list-style-type: none
+    display: flex
+    flex-direction: row
+    justify-content: space-around
+    border-style: ridge none
+    border-width: thin
+    border-color: #a3a3a3
+@include tablet
+// keep icons
+@include desktop
+  .flex-nav-container
+    display: none
+  .icon-nav
+    visibility: hidden
+.icon-nav
+  width: 50px
+//-->
+
+
 // Header
 #menu-icon
   width: 50px
