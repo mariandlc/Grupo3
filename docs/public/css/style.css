@@ -59,7 +59,7 @@ header label:hover {
   color: #000000;
   text-decoration: none; }
 
-@media (max-width: 768px) {
+@media (max-width: 800px) {
   #logo {
     left: 60px; }
   header {
@@ -109,7 +109,7 @@ header label:hover {
   border-width: thin;
   border-color: #a3a3a3; }
 
-@media (min-width: 844px) {
+@media (min-width: 801px) {
   .flex-nav-container {
     display: none; }
   .icon-nav {
@@ -271,7 +271,7 @@ header label:hover {
   .item-map #map {
     display: none; }
 
-@media (min-width: 480px) and (max-width: 843px) {
+@media (min-width: 480px) and (max-width: 800px) {
   .container .item-events {
     display: none; }
   .container .item-publications {
@@ -296,7 +296,7 @@ header label:hover {
       margin: 10px;
       background-color: #ffffff; } }
 
-@media (min-width: 844px) {
+@media (min-width: 801px) {
   .container {
     width: 70%;
     -webkit-box-align: start;
