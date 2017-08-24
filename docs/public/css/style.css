@@ -13,7 +13,11 @@ body {
   height: 35px; }
 
 .flex-nav-container {
-  background: #ffffff;
+  position: fixed;
+  top: 55;
+  z-index: -1;
+  width: 100%;
+  background: #f5f5f7;
   list-style-type: none;
   display: -webkit-box;
   display: -webkit-flex;
@@ -27,11 +31,14 @@ body {
   -webkit-justify-content: space-around;
   -ms-flex-pack: distribute;
   justify-content: space-around;
-  border-style: ridge none;
-  border-width: thin;
-  border-color: #a3a3a3; }
+  border-bottom: 1px solid #d9d9d9; }
+
+header {
+  border-bottom: 1px solid #d9d9d9; }
 
 @media (min-width: 801px) {
+  header {
+    border-bottom: none; }
   .flex-nav-container {
     display: none; }
   .icon-nav {
@@ -95,6 +102,7 @@ header label:hover {
     display: block; }
   .menu {
     position: absolute;
+    z-index: 100;
     top: 55px;
     background: #f5f5f7;
     width: 70%;
@@ -102,7 +110,7 @@ header label:hover {
     -webkit-transition: all 0.5s;
     -o-transition: all 0.5s;
     transition: all 0.5s;
-    z-index: 100; }
+    z-index: 1000; }
   .menu ul {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -156,7 +164,8 @@ header label:hover {
     -webkit-box-align: center;
     -webkit-align-items: center;
     -ms-flex-align: center;
-    align-items: center; }
+    align-items: center;
+    margin-top: 60px; }
     .container .item-publications .create-post {
       margin-top: 20px;
       display: -webkit-box;
@@ -204,6 +213,7 @@ header label:hover {
         width: 100px; }
       .container .item-publications .form-publication #btn_file {
         position: absolute;
+        z-index: -10;
         top: 0;
         bottom: 0;
         left: 0;
@@ -345,9 +355,9 @@ header label:hover {
           background-color: #ffffff; }
     .container .item-publications {
       -webkit-box-flex: 1;
-      -webkit-flex: 1 1 70%;
-      -ms-flex: 1 1 70%;
-      flex: 1 1 70%;
+      -webkit-flex: 1 1 100%;
+      -ms-flex: 1 1 100%;
+      flex: 1 1 100%;
       background-color: #f5f5f7;
       padding: 10px;
       margin: 10px; }
@@ -476,7 +486,9 @@ body {
   width: 80%;
   background-color: #f5f5f7;
   margin: 20px auto;
-  position: relative; }
+  position: relative;
+  margin-top: 70px;
+  z-index: -1; }
 
 .user-profile-img {
   min-width: 200px;

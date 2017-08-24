@@ -11,17 +11,23 @@
 
 //<-- NAV SMARPHONE AND TABLE
 .flex-nav-container
-    background: $background-color
-    list-style-type: none
-    display: flex
-    flex-direction: row
-    justify-content: space-around
-    border-style: ridge none
-    border-width: thin
-    border-color: #a3a3a3
+  position: fixed
+  top: 55
+  z-index: -1
+  width: 100%
+  background: $primary-color
+  list-style-type: none
+  display: flex
+  flex-direction: row
+  justify-content: space-around
+  border-bottom: 1px solid rgb(217, 217, 217)
+header
+  border-bottom: 1px solid rgb(217, 217, 217)
 @include tablet
 // keep icons
 @include desktop
+  header
+    border-bottom: none
   .flex-nav-container
     display: none
   .icon-nav
@@ -79,12 +85,13 @@ header label:hover
 
   .menu
     position: absolute
+    z-index: 100
     top: 55px
     background: rgba(245, 245, 247,1)
     width: 70%
     margin-left: -70%
     transition: all 0.5s
-    z-index: 100
+    z-index: 1000
 
   .menu ul
     flex-direction: column

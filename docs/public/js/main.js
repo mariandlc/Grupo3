@@ -8,6 +8,6 @@ function checkActual(){
 }
 $(document).ready(function() {
 
-  checkActual();
+  //checkActual();
 
 });

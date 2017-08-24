@@ -8,8 +8,10 @@ body
   background-size: 25%
   background-color: $background-color
 
+
 // header code
 @import _header.sass
+
 
 // bootstrap nav background-color
 .container-fluid
@@ -41,6 +43,7 @@ body
     display: flex
     flex-flow: column
     align-items: center
+    margin-top: 60px
     //create  publication style
     .create-post
       margin-top: 20px
@@ -76,6 +79,7 @@ body
         width: 100px
       #btn_file
         position: absolute
+        z-index: -10
         top: 0
         bottom: 0
         left: 0
@@ -165,10 +169,11 @@ body
           margin-top: 10px
           background-color: $background-color
     .item-publications
-      flex: 1 1 70%
+      flex: 1 1 100%
       background-color: $primary-color
       padding: 10px
       margin: 10px
+
       // publication style
       .publication
         height: 150px
