@@ -106,8 +106,8 @@ header label:hover {
     z-index: 2;
     top: 55px;
     background: #f5f5f7;
-    width: 70%;
-    margin-left: -70%;
+    width: 100%;
+    margin-left: -100%;
     -webkit-transition: all 0.5s;
     -o-transition: all 0.5s;
     transition: all 0.5s;
