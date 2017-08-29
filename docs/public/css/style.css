@@ -608,6 +608,8 @@ body {
     -webkit-align-self: center;
     -ms-flex-item-align: center;
     align-self: center; }
+  .form-edit-profile .user-experience-edit h4 {
+    text-align: center; }
   .form-edit-profile .user-experience-edit .text-form {
     width: 70%; }
 
