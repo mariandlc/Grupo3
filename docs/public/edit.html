@@ -38,23 +38,26 @@
     </div>
 
 
-    <div class="container-profile">
+    <div class="container-edit">
       <img class="user-profile-img" src="img/users/user-1.jpg" alt="">
-      <form class="" action="index.html" method="post">
-        <div class="user-info-personal">
-          <p>Editar imágen <input type="file" name="img" placeholder="Edit"></p>
+      <form class="form-edit-profile" action="#" method="post">
+        <div class="user-edit-personal">
+          <p id="edit-img">
+            <input type="file" name="file" id="file" class="inputfile" />
+            <label for="file">Cambiar imagen</label>
+          </p>
           <p class="">Nombre: <input type="text" name="" value="" placeholder="Martina Sastre"> </p>
           <p class="">Edad: <input type="text" name="" value="" placeholder="22"></p>
           <p class="">Fecha de nacimiento: <input type="date" name="" value="" placeholder=""></p>
           <p class="">Lugar:<input type="text" name="" value="" placeholder="Buenos Aires"> </p>
-          <div class="user-experience">
+          <div class="user-experience-edit">
             <h4 class="title-experience">Experiencia</h3>
             <p>
               <textarea  class="text-form"rows="2" cols="60" placeholder="Corri en más de 50 maratones oficiales. Tengo un tiempo de 4 minutos por km en los 20km."></textarea>
             </p>
           </div>
         </div>
-        <input type="submit" name="" value="Editar" style="color:#fff;background-color:rgb(240, 20, 20)">
+        <input type="submit" id="submit-edit-profile" name="" value="Editar" >
       </form>
     </div>
 
